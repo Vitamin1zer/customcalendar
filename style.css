@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+  background: #000;
+  background-size: cover;
+}
+
+
+.head {
+  font-family: "Montserrat", sans-serif;
+  font-size: 345px;
+  color: #03e9f420;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+
+@media screen and (max-width:1434px) {
+  .head {
+    font-size: 250px;
+    position: fixed;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .head {
+    font-size: 10em;
+    position: fixed;
+  }
+
+  .block {
+    transform: scale(1);
+    margin: 0 40px 20px !important;
+  }
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  max-width: 80%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.block {
+  min-width: 250px;
+  width: 250px;
+  margin: 0 40px 20px;
+  border-radius: 10px 10px 0 0;
+  cursor: default;
+  transition: 0.6s;
+  background-color: #ffffff09;
+
+}
+
+.month {
+  border-radius: 10px 10px 0 0;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  line-height: 40px;
+  padding: 7px 20px;
+  letter-spacing: 1px;
+  transition: 0.6s;
+  position: relative;
+  overflow: hidden;
+  color: #03e9f4;
+  text-shadow: 0 0 3px;
+
+}
+
+
+.block:hover span {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate1 1s linear;
+}
+
+.block:hover {
+  box-shadow: #03e9f4 0 0 25px,
+    #03e9f4 0 0 100px;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+
+  50% {
+    left: 100%;
+  }
+
+}
+
+.days {
+  max-width: 250px;
+  align-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 0 0 10px !important;
+  margin: 0 auto !important;
+  text-align: center;
+  height: 210px;
+  font-size: 18px;
+  color: #fff;
+  list-style: none;
+
+}
+
+.days li {
+  padding: 0px;
+  margin: 2px;
+  min-width: 30px;
+  line-height: 30px;
+  border-radius: 4px;
+}
+
+.days li:hover {
+  background-color: #03e9f4;
+  color: #000;
+}
+
+.days li.weekend:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.weekend {
+  color: red;
+  position: relative;
+
+  text-shadow: 0 0 3px;
+}
+
+.weekend:hover::after {
+  content: "Выходной" !important;
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  left: 40px;
+  background-color: red !important;
+  box-shadow: red 0 0 10px 2px !important;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.prev {
+  color: #7e7e7e80;
+}
+
+.days li.prev:hover {
+  background-color: #7e7e7e80;
+  color: #fff;
+}
+
+.today {
+  box-shadow: #03e9f4 0 0 10px 2px !important;
+  position: relative;
+  
+  text-shadow: 0 0 3px;
+}
+
+.today:hover::after {
+  content: "Сегодня" !important;
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  left: 40px;
+  background-color: #03e9f4;
+  box-shadow: #03e9f4 0 0 10px 2px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.salary {
+  color: #03e9f4 !important;
+  position: relative;
+
+  text-shadow: 0 0 3px;
+}
+
+.salary:hover {
+  background-color: #03e9f4 !important;
+  color: #000 !important;
+}
+
+.salary:hover::after {
+  content: "Зарплата!" !important;
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  left: 40px;
+  background-color: #03e9f4 !important;
+  box-shadow: #03e9f4 0 0 10px 2px !important;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+
+.vacation {
+  box-shadow: #ff4500 0 0 10px 2px;
+  color: #ff4500;
+  position: relative;
+}
+
+.vacation:hover {
+  background-color: #ff4500 !important;
+  color: #fff !important;
+}
+
+.vacation:hover::after {
+  content: "Отпуск";
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  left: 40px;
+  background-color: #ff4500;
+  box-shadow: #ff4500 0 0 10px 2px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
